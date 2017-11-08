@@ -39,9 +39,9 @@ public void draw()
     aBunch[i].show();
   }
 
-  if (isAccelerating == true) bob.accelerate(100);
-  if (isTurningLeft == true) bob.turn(-10);
-  if (isTurningRight == true) bob.turn(10);
+  if (isAccelerating == true) bob.accelerate(0.5);
+  if (isTurningLeft == true) bob.turn(-2);
+  if (isTurningRight == true) bob.turn(2);
 
   fill(255);
   text("myCenterX: "+ bob.getX(), 10, 20);
