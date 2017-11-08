@@ -3,16 +3,23 @@ boolean isAccelerating = false;
 boolean isTurningLeft = false;
 boolean isTurningRight = false;
 boolean isHyperspace = false;
+
 Stars[] aBunch;
+Asteroid[] haha;
 
 public void setup() 
 {  
   size(600, 600);
-  bob = new Spaceship();
   aBunch = new Stars[200];
+  bob = new Spaceship();
+  haha = new Asteroid[10];
   for (int i=0; i<aBunch.length; i++)
   {
     aBunch[i]=new Stars();
+  }
+  for (int i=0; i<haha.length; i++)
+  {
+    haha[i] = new Asteroid();
   }
 }
 public void draw() 
@@ -20,7 +27,13 @@ public void draw()
   background(0);
   bob.show();
   bob.move();
-
+  fill(255);
+  for (int i=0; i<10; i++)
+  {
+    haha[i].show();
+    haha[i].move();
+    haha[i].accelerate(0.5);
+  }
   for (int i=0; i<200; i++)
   {
     aBunch[i].show();

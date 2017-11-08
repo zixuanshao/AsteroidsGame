@@ -8,7 +8,10 @@ class Stars //note that this class does NOT extend Floater
   public void show()
   {
     for (int i=0; i<aBunch.length; i++)
+    {
+      noStroke();
       fill((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
       ellipse(myX,myY,5,5);
+    }
   }
 }
