@@ -32,14 +32,14 @@ public void draw()
   {
     haha[i].show();
     haha[i].move();
-    haha[i].accelerate(0.5);
+    haha[i].accelerate(1.5);
   }
   for (int i=0; i<200; i++)
   {
     aBunch[i].show();
   }
 
-  if (isAccelerating == true) bob.accelerate(0.5);
+  if (isAccelerating == true) bob.accelerate(1);
   if (isTurningLeft == true) bob.turn(-2);
   if (isTurningRight == true) bob.turn(2);
 
