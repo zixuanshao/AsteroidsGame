@@ -32,16 +32,16 @@ public void draw()
   {
     haha[i].show();
     haha[i].move();
-    haha[i].accelerate(1.5);
+    haha[i].accelerate(7.5);
   }
   for (int i=0; i<200; i++)
   {
     aBunch[i].show();
   }
 
-  if (isAccelerating == true) bob.accelerate(1);
-  if (isTurningLeft == true) bob.turn(-2);
-  if (isTurningRight == true) bob.turn(2);
+  if (isAccelerating == true) bob.accelerate(5);
+  if (isTurningLeft == true) bob.turn(-10);
+  if (isTurningRight == true) bob.turn(10);
 
   fill(255);
   text("myCenterX: "+ bob.getX(), 10, 20);
