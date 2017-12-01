@@ -46,7 +46,7 @@ public void draw()
     aBunch[i].show();
   }
 
-  if (isAccelerating == true) bob.accelerate(5);
+  if (isAccelerating == true) bob.accelerate(20);
   if (isTurningLeft == true) bob.turn(-15);
   if (isTurningRight == true) bob.turn(15);
 
