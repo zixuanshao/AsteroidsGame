@@ -22,6 +22,14 @@ class Asteroid extends Floater
     yCorners = yCor;
     myColor = color(255);
   }
+  public boolean collide(int x, int y)
+  {
+    if(dist((int)myCenterX, (int)myCenterY, x, y) < 20)
+      return true;
+    else {
+      return false;
+    }
+  }
   public void move()
   {
     turn(myRotatingSpeed);
