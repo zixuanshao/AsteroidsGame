@@ -24,7 +24,7 @@ class Asteroid extends Floater
   }
   public boolean collide(int x, int y)
   {
-    if(dist((int)myCenterX, (int)myCenterY, x, y) < 20)
+    if(dist((int)myCenterX, (int)myCenterY, x, y) < 40)
       return true;
     else {
       return false;
