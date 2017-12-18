@@ -6,6 +6,7 @@ boolean isHyperspace = false;
 
 Stars[] aBunch;
 ArrayList <Asteroid> ast;
+ArrayList <bullet> boos;
 
 public void setup() 
 {  
@@ -18,12 +19,11 @@ public void setup()
   {
     aBunch[i]=new Stars();
   }
-
   for (int i=0; i<10; i++)
   {
     ast.add(i, new Asteroid());
   }
-  //dist(x1, y1, x2, y2)
+  boos = new ArrayList <bullet>();
 }
 public void draw() 
 {
@@ -42,6 +42,23 @@ public void draw()
       ast.remove(i);
       System.out.println("crash") ; 
     }
+      ast.remove(i);
+  }
+
+  for(int i = 0; i<boos.size(); i++)
+  {
+    boos.get(i).show();
+    boos.get(i).move();
+    ast.get(i).accelerate(0.5);
+    for(int n=0; n<ast.size(); n++){
+      if (boos.get(i).collide(ast.get(n).getX(), ast.get(n).getY()) == true)
+      {
+        boos.remove(i);
+        ast.remove(n);
+        System.out.println("crash") ; 
+      }
+    }
+    
   }
 
   for (int i=0; i<200; i++)
@@ -75,6 +92,7 @@ public void keyPressed()
     bob.setDirectionY(0);
     isHyperspace = true;
   }
+  if (key == ' ') boos.add(new bullet(bob));
 }
 public void keyReleased()
 {
