@@ -27,7 +27,7 @@ public void setup()
 }
 public void draw() 
 {
-  background(0);
+  background(0, 0, 0, 20);
   bob.show();
   bob.move();
   fill(255);
