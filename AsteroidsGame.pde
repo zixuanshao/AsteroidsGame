@@ -49,7 +49,6 @@ public void draw()
   {
     boos.get(i).show();
     boos.get(i).move();
-    ast.get(i).accelerate(0.5);
     for(int n=0; n<ast.size(); n++){
       if (boos.get(i).collide(ast.get(n).getX(), ast.get(n).getY()) == true)
       {
